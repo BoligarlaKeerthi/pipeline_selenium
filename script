@@ -10,7 +10,7 @@ pipeline{
         stage('clone the repo')
         {
             steps{
-                git ''
+                git 'https://github.com/BoligarlaKeerthi/pipeline_selenium'
             }
         }
         
