@@ -1,0 +1,25 @@
+pipeline{
+    
+    tools{
+        maven 'mymaven'
+    }
+    
+    agent {label 'win_node'}
+    
+    stages{
+        stage('clone the repo')
+        {
+            steps{
+                git ''
+            }
+        }
+        
+         stage('Seleniumtest')
+        {
+            steps{
+                sh 'mvn test'
+            }
+        }
+    }
+    
+}
